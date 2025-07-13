@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { getCryptos } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { SmartImagePlaceholder, SmartTextPlaceholder } from 'smart-placeholder';
@@ -80,7 +80,7 @@ export default function CryptoDashboard() {
       {filtered.length === 0 ? (
         loading ?
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((item, index) =>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(() =>
 
               <div><SmartImagePlaceholder style={{ height: '100px' }} /></div>
             )}</div> : <p className="text-gray-500 text-sm">No cryptocurrences found.</p>
